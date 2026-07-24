@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Zap, LogOut, User, LayoutDashboard, Trophy } from "lucide-react";
-import { getUser, clearAuth, isAuthenticated } from "@/lib/auth";
+import { getUser, clearAuth } from "@/lib/auth";
 import Button from "@/components/ui/Button";
 
 export default function Navbar() {

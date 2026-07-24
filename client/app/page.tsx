@@ -132,7 +132,7 @@ export default function Home() {
       {/* ── ABOUT ── */}
       <section id="about" className="section-padding relative z-10">
         <div className="max-w-5xl mx-auto">
-          <motion.div variants={up} initial="hidden" whileInView="visible" viewport={{once:true}} className="text-center mb-14">
+          <motion.div variants={up as any} initial="hidden" whileInView="visible" viewport={{once:true}} className="text-center mb-14">
             <span className="badge badge-purple mb-4">About</span>
             <h2 className="text-4xl font-bold text-white mb-4">What is this <span className="gradient-text">Challenge?</span></h2>
             <p className="text-white/45 max-w-2xl mx-auto">A secure platform where you use a code to get a unique challenge scenario.</p>
@@ -142,7 +142,7 @@ export default function Home() {
               {icon:Shield,t:"Fully Secure",d:"Fast, reliable, and straightforward code access.",c:"text-green-400",bg:"bg-green-400/10"},
               {icon:Clock,t:"Timed Event",d:"Complete the challenge within the specified timeframe.",c:"text-blue-400",bg:"bg-blue-400/10"},
             ].map((x,i)=>(
-              <motion.div key={x.t} variants={up} initial="hidden" whileInView="visible" custom={i} viewport={{once:true}}>
+              <motion.div key={x.t} variants={up as any} initial="hidden" whileInView="visible" custom={i} viewport={{once:true}}>
                 <GlassCard className="p-6 text-center hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-500/10">
                   <div className={`w-11 h-11 rounded-xl ${x.bg} flex items-center justify-center mx-auto mb-4`}><x.icon size={22} className={x.c}/></div>
                   <h3 className="font-semibold text-white mb-2">{x.t}</h3>
@@ -157,13 +157,13 @@ export default function Home() {
       {/* ── FAQ ── */}
       <section id="faq" className="section-padding relative z-10">
         <div className="max-w-2xl mx-auto">
-          <motion.div variants={up} initial="hidden" whileInView="visible" viewport={{once:true}} className="text-center mb-14">
+          <motion.div variants={up as any} initial="hidden" whileInView="visible" viewport={{once:true}} className="text-center mb-14">
             <span className="badge badge-purple mb-4">FAQ</span>
             <h2 className="text-4xl font-bold text-white mb-4">Common <span className="gradient-text">Questions</span></h2>
           </motion.div>
           <div className="space-y-3">
             {FAQS.map((f,i)=>(
-              <motion.div key={i} variants={up} initial="hidden" whileInView="visible" custom={i*.06} viewport={{once:true}}>
+              <motion.div key={i} variants={up as any} initial="hidden" whileInView="visible" custom={i*.06} viewport={{once:true}}>
                 <GlassCard className="p-5 hover:-translate-y-0.5 hover:border-purple-500/20">
                   <div className="flex gap-3">
                     <ChevronRight size={15} className="text-purple-400 mt-0.5 flex-shrink-0"/>
